@@ -1,14 +1,15 @@
-var username = "Strider";
+"use strict";
+let username = "Strider";
 // username = 10
 // cant change the type
-var array = ['hello', 'hey', 'hi'];
+let array = ['hello', 'hey', 'hi'];
 // array.push(12) 
 // cant push the number type as its initialization was array with the string
 // mix types array
-var mixArray = [1, 'hello', 2, 'hey', 3, 'hi'];
+let mixArray = [1, 'hello', 2, 'hey', 3, 'hi'];
 mixArray.push(10);
 mixArray.push('yo');
-var object = {
+let object = {
     fullname: "Aragorn",
     username: "Strider"
 };
@@ -23,32 +24,35 @@ object = {
 //     isAdmin : false
 // }
 // explicit types
-var fullname;
+let fullname;
 fullname = "Aragorn";
-var isAdmin;
+let isAdmin;
 isAdmin = 'yes';
 isAdmin = true;
-var randomNum;
+let randomNum;
 randomNum = [34, 4324, 5, 23412, 65];
-var mixedArray;
+let mixedArray;
 mixedArray = ["hello", 2214];
-var person;
+let person;
 person = {
     fullname: "Aragorn",
     isAdmin: false
 };
 // any
-var variable = "hello";
+let variable = "hello";
 variable = true;
 variable = 5;
 variable = ['34'];
-console.log(username);
-console.log(array);
-console.log(mixArray);
-console.log(object);
-console.log(fullname);
-console.log(isAdmin);
-console.log(randomNum);
-console.log(mixedArray);
-console.log(person);
-console.log(variable);
+let addNums = (a, b, optional, defaultParam = 10) => {
+    // optional is undefined when the argument is not provided
+    // console.log(optional) 
+    // console.log(defaultParam)
+    return a + b;
+};
+addNums(5, 5, 10, '10');
+// function signature
+// kinda base structure of specific function
+let calcNums;
+calcNums = (num1, num2) => {
+    return num1 + num2;
+};

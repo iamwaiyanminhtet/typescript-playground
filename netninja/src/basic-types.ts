@@ -58,13 +58,33 @@ variable = true;
 variable = 5;
 variable = ['34']
 
-console.log(username);
-console.log(array);
-console.log(mixArray);
-console.log(object);
-console.log(fullname);
-console.log(isAdmin);
-console.log(randomNum);
-console.log(mixedArray);
-console.log(person);
-console.log(variable);
+// console.log(username);
+// console.log(array);
+// console.log(mixArray);
+// console.log(object);
+// console.log(fullname);
+// console.log(isAdmin);
+// console.log(randomNum);
+// console.log(mixedArray);
+// console.log(person);
+// console.log(variable);
+
+
+// functions
+
+type stringOrNum = string | number
+
+let addNums = (a : number, b : number, optional?:number, defaultParam : stringOrNum = 10): number => {
+    // optional is undefined when the argument is not provided
+    // console.log(optional) 
+    // console.log(defaultParam)
+    return a + b;
+}; 
+addNums(5,5,10,'10');
+
+// function signature
+// kinda base structure of specific function
+let calcNums : (a:number, b:number) => number;
+calcNums = (num1 : number, num2: number) => {
+    return num1 + num2;
+}
