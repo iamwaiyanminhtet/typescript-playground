@@ -1,4 +1,11 @@
-export class Book {
+export interface BInterFace {
+    name : string
+    author : string
+    pages : number
+}
+
+
+export class Book implements BInterFace {
     // name : string
     // author : string
     // readonly pages  :number
