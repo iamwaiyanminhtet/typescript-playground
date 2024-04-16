@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { useCounter } from "../context/CounterContex";
 
 interface ListProps<T> {
   items: T[],
@@ -7,6 +8,9 @@ interface ListProps<T> {
 }
 
 const List = <T,>({ items, render, children }: ListProps<T>) => {
+
+  const { state } = useCounter();
+
   return (
     <>
     <h1>{children}</h1>
@@ -19,6 +23,7 @@ const List = <T,>({ items, render, children }: ListProps<T>) => {
         )
       }
     </ul>
+    <p>counter context count {state.count}</p>
     </>
   )
 }
